@@ -40,11 +40,11 @@ The goal of this analysis is to build and evaluate a deep learning model to pred
     - **Output Layer**: 1 neuron with `sigmoid` activation function to output a probability between 0 and 1 for classification.
   - **Reason for choices**: `ReLU` is commonly used for hidden layers as it helps avoid the vanishing gradient problem. The `sigmoid` activation is used in the output layer because it's appropriate for binary classification tasks.
 
+![Screenshot (272)](https://github.com/user-attachments/assets/d08fd858-a5bc-4864-b296-6ee05758c670)
+
 - **Model Performance**:
   - The model achieved a final accuracy of **72.78%**.
   - **Target performance (75%)** was not reached, but the model was able to perform decently with the available data.
-
-![Screenshot (272)](https://github.com/user-attachments/assets/d08fd858-a5bc-4864-b296-6ee05758c670)
 
 - **Steps to Improve Model Performance**:
   - Increased number of neuron layers to three.
