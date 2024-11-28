@@ -8,10 +8,10 @@ The goal of this analysis is to build and evaluate a deep learning model to pred
 
 ## Data Preprocessing
 
-- **Target Variable(s)**:
-  - The target variable for the model is `IS_SUCCESSFUL`, as it represents whether a charity application is successful or not (binary classification).
+- **Target Variable**:
+  - The target variable for the model is `IS_SUCCESSFUL`, as it represents whether a charity application is successful or not.
 
-- **Feature Variable(s)**:
+- **Feature Variables**:
   - The feature variables are:
     - `APPLICATION_TYPE`
     - `AFFILIATION`
@@ -44,25 +44,28 @@ The goal of this analysis is to build and evaluate a deep learning model to pred
   - The model achieved a final accuracy of **72.78%**.
   - **Target performance (75%)** was not reached, but the model was able to perform decently with the available data.
 
+![Screenshot (272)](https://github.com/user-attachments/assets/d08fd858-a5bc-4864-b296-6ee05758c670)
+
 - **Steps to Improve Model Performance**:
   - Increased number of neuron layers to three.
   - Increased number of units to 128, 64, and 32.
   - Tried `thela` activation function.
-  - Decreased epochs from 100 to 50. 
+  - Decreased epochs from 100 to 50.
 
-Other than the epoch reduction, these all made the accuracy worse, so I deleted one of the neuron layers and lowered the number of units back to 80 and 30. The `thela` function also made things worse, so I reverted back to the `ReLU` function. The only thing that helped was reducing the epochs to 50, so the final model uses 50 epochs instead of 100.
+Other than the epoch reduction, these steps all resulted in a decrease in accuracy. I thus deleted one of the neuron layers and lowered the number of units back to 80 and 30. The `thela` function also worsened the model's accuracy, so I reverted back to the `ReLU` function. The only thing that helped was reducing the epochs to 50, so the final model uses 50 epochs instead of 100.
+
+![Screenshot (273)](https://github.com/user-attachments/assets/5060f1e0-340d-46d2-9e3e-44728e6d48d4)
 
 ---
 
 # Summary
 
 - **Overall Results**:
-  - The deep learning model achieved an accuracy of **72.83%**, which was below the desired 75% threshold.
+  - The deep learning model achieved an accuracy of **72.78%**, which was below the desired 75% threshold.
   - Despite attempts to improve the model through various tuning and regularization strategies, the accuracy remained under the target.
   
-- **Recommendation for a Different Model**:
-  - A **Random Forest** or **Gradient Boosting Machine (GBM)** model could be a good alternative to the deep learning model. These models are often effective for classification tasks with tabular data like this one, especially when feature importance is important for prediction.
-  - **Reasoning**: Unlike neural networks, which require large datasets and careful tuning, tree-based models like Random Forest and GBM typically handle tabular data with fewer hyperparameters and can often provide competitive performance with less risk of overfitting.
+- **Recommendation for a Different Model:**
+  - A **Random Forest** or **Gradient Boosting Machine (GBM)** model could be a great alternative to a deep learning model. These methods work really well for sorting tasks with structured data like this, especially when understanding which factors are most important is key. Unlike deep learning, which needs a lot of data and careful adjustments, tree-based models like Random Forest and GBM are easier to set up and often perform just as well without the risk of overfitting.
 
 - **Conclusion**:
   - Although a deep learning model showed promise, alternative machine learning models such as **Random Forest** or **Gradient Boosting** might be more effective for this classification problem and easier to optimize.
